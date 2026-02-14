@@ -5,8 +5,9 @@ Country Lookup is a simple tool for looking up country data. It returns the coun
 ![Build Status](https://img.shields.io/badge/build-passing-green)
 ![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
 ![Prod Ready](https://img.shields.io/badge/production-ready-blue)
+[![npm version](https://img.shields.io/npm/v/@apiverve/countrylookup.svg)](https://www.npmjs.com/package/@apiverve/countrylookup)
 
-This is a Javascript Wrapper for the [Country Lookup API](https://apiverve.com/marketplace/countrylookup)
+This is a Javascript Wrapper for the [Country Lookup API](https://apiverve.com/marketplace/countrylookup?utm_source=npm&utm_medium=readme)
 
 ---
 
@@ -27,15 +28,15 @@ yarn add @apiverve/countrylookup
 ## Configuration
 
 Before using the Country Lookup API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com)
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=npm&utm_medium=readme)
 
 ---
 
 ## Quick Start
 
-[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart)
+[Get started with the Quick Start Guide](https://docs.apiverve.com/quickstart?utm_source=npm&utm_medium=readme)
 
-The Country Lookup API documentation is found here: [https://docs.apiverve.com/ref/countrylookup](https://docs.apiverve.com/ref/countrylookup).
+The Country Lookup API documentation is found here: [https://docs.apiverve.com/ref/countrylookup](https://docs.apiverve.com/ref/countrylookup?utm_source=npm&utm_medium=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -59,7 +60,8 @@ Using the API is simple. All you have to do is make a request. The API will retu
 
 ```javascript
 var query = {
-  country: "USA"
+  country: "USA",
+  majorcities: false
 };
 
 api.execute(query, function (error, data) {
@@ -79,7 +81,8 @@ You can also use promises to make requests. The API returns a promise that you c
 
 ```javascript
 var query = {
-  country: "USA"
+  country: "USA",
+  majorcities: false
 };
 
 api.execute(query)
@@ -100,7 +103,8 @@ You can also use async/await to make requests. The API returns a promise that yo
 ```javascript
 async function makeRequest() {
     var query = {
-  country: "USA"
+  country: "USA",
+  majorcities: false
 };
 
     try {
@@ -235,7 +239,7 @@ async function makeRequest() {
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=npm&utm_medium=readme).
 
 ---
 
@@ -247,14 +251,14 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=npm&utm_medium=readme), [Privacy Policy](https://apiverve.com/privacy?utm_source=npm&utm_medium=readme), and [Refund Policy](https://apiverve.com/refund?utm_source=npm&utm_medium=readme).
 
 ---
 
 ## License
 Licensed under the The MIT License (MIT)
 
-Copyright (&copy;) 2025 APIVerve, and EvlarSoft LLC
+Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
 Permission is hereby granted, free of charge, to any person obtaining a copy of this software and associated documentation files (the "Software"), to deal in the Software without restriction, including without limitation the rights to use, copy, modify, merge, publish, distribute, sublicense, and/or sell copies of the Software, and to permit persons to whom the Software is furnished to do so, subject to the following conditions:
 
