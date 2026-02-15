@@ -48,7 +48,6 @@ namespace APIVerve.API.CountryLookup
         public string Cca2 { get; set; }
 
         [JsonProperty("ccn3")]
-        [JsonConverter(typeof(ParseStringConverter))]
         public long Ccn3 { get; set; }
 
         [JsonProperty("cca3")]
