@@ -12,9 +12,14 @@ namespace APIVerve.API.CountryLookup
     {
         /// <summary>
         /// The Country name or ISO code of the country for which you want to get the data (e.g., USA)
-        /// Example: USA
         /// </summary>
         [JsonProperty("country")]
         public string Country { get; set; }
+
+        /// <summary>
+        /// Specify if you would like to return all major cities of the country found
+        /// </summary>
+        [JsonProperty("majorcities")]
+        public string Majorcities { get; set; }
     }
 }
