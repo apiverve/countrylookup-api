@@ -44,7 +44,10 @@ from apiverve_countrylookup.apiClient import CountrylookupAPIClient
 # Initialize the client with your APIVerve API key
 api = CountrylookupAPIClient("[YOUR_API_KEY]")
 
-query = { "country": "USA", "majorcities": true }
+query = {
+    "country": "USA",
+    "majorcities": true
+}
 
 try:
     # Make the API call
@@ -82,7 +85,10 @@ Using the API client, you can perform requests to the API.
 ###### Define Query
 
 ```python
-query = { "country": "USA", "majorcities": true }
+query = {
+    "country": "USA",
+    "majorcities": true
+}
 ```
 
 ###### Simple Request
@@ -225,7 +231,10 @@ from apiverve_countrylookup.apiClient import CountrylookupAPIClient, Countrylook
 
 api = CountrylookupAPIClient("[YOUR_API_KEY]")
 
-query = { "country": "USA", "majorcities": true }
+query = {
+    "country": "USA",
+    "majorcities": true
+}
 
 try:
     result = api.execute(query)
@@ -246,7 +255,10 @@ from apiverve_countrylookup.apiClient import CountrylookupAPIClient, Countrylook
 
 api = CountrylookupAPIClient("[YOUR_API_KEY]")
 
-query = { "country": "USA", "majorcities": true }
+query = {
+    "country": "USA",
+    "majorcities": true
+}
 
 try:
     result = api.execute(query)
@@ -280,7 +292,10 @@ The client supports the context manager protocol for automatic resource cleanup:
 ```python
 from apiverve_countrylookup.apiClient import CountrylookupAPIClient, CountrylookupAPIClientError
 
-query = { "country": "USA", "majorcities": true }
+query = {
+    "country": "USA",
+    "majorcities": true
+}
 
 # Using context manager ensures proper cleanup
 with CountrylookupAPIClient("[YOUR_API_KEY]") as api:
@@ -306,7 +321,10 @@ from apiverve_countrylookup.apiClient import CountrylookupAPIClient
 # Enable debug mode
 api = CountrylookupAPIClient("[YOUR_API_KEY]", debug=True)
 
-query = { "country": "USA", "majorcities": true }
+query = {
+    "country": "USA",
+    "majorcities": true
+}
 
 # Debug information will be printed to console
 result = api.execute(query)
@@ -321,8 +339,12 @@ from apiverve_countrylookup.apiClient import CountrylookupAPIClient
 
 api = CountrylookupAPIClient("[YOUR_API_KEY]")
 
+query = {
+    "country": "USA",
+    "majorcities": true
+}
+
 try:
-    query = { "country": "USA", "majorcities": true }
     result = api.execute(query)
     print(result)
 finally:
