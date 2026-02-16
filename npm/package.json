@@ -1,6 +1,6 @@
 {
   "name": "@apiverve/countrylookup",
-  "version": "1.1.13",
+  "version": "1.1.14",
   "description": "Country Lookup is a simple tool for looking up country data. It returns the country name, capital, and more.",
   "main": "index.js",
   "types": "index.d.ts",
