@@ -23,7 +23,10 @@ class ValidationError(CountrylookupAPIClientError):
 
 class CountrylookupAPIClient:
     # Validation rules for parameters (generated from schema)
-    VALIDATION_RULES = {"country": {"type": "string", "required": True}, "majorcities": {"type": "boolean", "required": False, "default": False}}
+    VALIDATION_RULES = {
+        "country": {"type": "string", "required": True},
+        "majorcities": {"type": "boolean", "required": False, "default": False}
+    }
 
     # Format validation patterns
     FORMAT_PATTERNS = {
@@ -71,18 +74,10 @@ class CountrylookupAPIClient:
                 "API key is required. Get your API key at: https://apiverve.com"
             )
 
-        # Check format (alphanumeric, hyphens, and underscores for prefixed keys)
+        # Check format (GUID, prefixed keys like apv_xxx, or alphanumeric)
         if not re.match(r'^[a-zA-Z0-9_-]+$', api_key):
             raise CountrylookupAPIClientError(
                 "Invalid API key format. API key should only contain letters, numbers, hyphens, and underscores. "
-                "Get your API key at: https://apiverve.com"
-            )
-
-        # Check length (at least 32 characters without hyphens/underscores)
-        trimmed_key = api_key.replace('-', '').replace('_', '')
-        if len(trimmed_key) < 32:
-            raise CountrylookupAPIClientError(
-                "Invalid API key. API key appears to be too short. "
                 "Get your API key at: https://apiverve.com"
             )
 
