@@ -147,12 +147,6 @@ async function makeRequest() {
         "cioc": "USA",
         "independent": true,
         "status": "officially-assigned",
-        "currencies": {
-          "USD": {
-            "name": "United States dollar",
-            "symbol": "$"
-          }
-        },
         "capital": [
           "Washington D.C."
         ],
@@ -171,64 +165,7 @@ async function makeRequest() {
           -97
         ],
         "landlocked": false,
-        "borders": [
-          "CAN",
-          "MEX"
-        ],
-        "area": 9372610,
-        "flag": "🇺🇸",
-        "majorCities": [
-          "Akron",
-          "Albany",
-          "Albuquerque",
-          "Alexandria",
-          "Allentown",
-          "Alpharetta",
-          "Anaheim",
-          "Anchorage",
-          "Ann Arbor",
-          "Arlington",
-          "Arlington",
-          "Asheville",
-          "Astoria",
-          "Atlanta",
-          "Aurora",
-          "Austin",
-          "Bakersfield",
-          "Baltimore",
-          "Baton Rouge",
-          "Beaverton",
-          "Bellevue",
-          "Berkeley",
-          "Beverly Hills",
-          "Birmingham",
-          "Boca Raton",
-          "Boise",
-          "Boston",
-          "Boulder",
-          "Bronx",
-          "Brooklyn",
-          "Buffalo",
-          "Cambridge",
-          "Carlsbad",
-          "Cary",
-          "Chandler",
-          "Charleston",
-          "Charlotte",
-          "Charlottesville",
-          "Chattanooga",
-          "Cherry Hill",
-          "Chicago",
-          "Cincinnati",
-          "Clearwater",
-          "Cleveland",
-          "Colorado Springs",
-          "Columbia",
-          "Columbia",
-          "Columbus",
-          "Costa Mesa",
-          "Dallas"
-        ]
+        "flag": "🇺🇸"
       }
     ]
   }
