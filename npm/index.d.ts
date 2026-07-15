@@ -4,58 +4,57 @@ declare module '@apiverve/countrylookup' {
     secure?: boolean;
   }
 
+  /**
+   * Describes fields the current plan does not unlock. Locked fields arrive as null
+   * in `data`; `locked_fields` names them, using dot paths for nested fields.
+   * Absent when the plan unlocks everything.
+   */
+  export interface PremiumInfo {
+    message: string;
+    upgrade_url: string;
+    locked_fields: string[];
+  }
+
   export interface countrylookupResponse {
     status: string;
     error: string | null;
     data: CountryLookupData;
     code?: number;
+    premium?: PremiumInfo;
   }
 
 
   interface CountryLookupData {
-      search:    string;
+      search:    null | string;
       countries: Country[];
   }
   
   interface Country {
       name:         Name;
-      tld:          string[];
-      cca2:         string;
-      ccn3:         string;
-      cca3:         string;
-      cioc:         string;
-      independent:  boolean;
-      status:       string;
-      currencies:   Currencies;
-      capital:      string[];
-      altSpellings: string[];
-      region:       string;
-      subregion:    string;
+      tld:          (null | string)[];
+      cca2:         null | string;
+      ccn3:         null | string;
+      cca3:         null | string;
+      cioc:         null | string;
+      independent:  boolean | null;
+      status:       null | string;
+      capital:      (null | string)[];
+      altSpellings: (null | string)[];
+      region:       null | string;
+      subregion:    null | string;
       languages:    Languages;
-      latlng:       number[];
-      landlocked:   boolean;
-      borders:      string[];
-      area:         number;
-      flag:         string;
-      majorCities:  string[];
-  }
-  
-  interface Currencies {
-      usd: Usd;
-  }
-  
-  interface Usd {
-      name:   string;
-      symbol: string;
+      latlng:       (number | null)[];
+      landlocked:   boolean | null;
+      flag:         null | string;
   }
   
   interface Languages {
-      eng: string;
+      eng: null | string;
   }
   
   interface Name {
-      common:   string;
-      official: string;
+      common:   null | string;
+      official: null | string;
       native:   Native;
   }
   
@@ -64,8 +63,8 @@ declare module '@apiverve/countrylookup' {
   }
   
   interface Eng {
-      official: string;
-      common:   string;
+      official: null | string;
+      common:   null | string;
   }
 
   export default class countrylookupWrapper {
