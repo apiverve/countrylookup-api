@@ -1,0 +1,49 @@
+{
+    "name": "apiverve/countrylookup",
+    "description": "Country Lookup is a simple tool for looking up country data. It returns the country name, capital, and more.",
+    "version": "1.2.0",
+    "type": "library",
+    "license": "MIT",
+    "authors": [
+        {
+            "name": "APIVerve",
+            "email": "hello@apiverve.com",
+            "homepage": "https://apiverve.com"
+        }
+    ],
+    "keywords": [
+        "api",
+        "apiverve",
+        "countrylookup",
+        "country lookup",
+        "country data",
+        "country lookup api",
+        "country data api",
+        "country lookup tool"
+    ],
+    "homepage": "https://apiverve.com/marketplace/countrylookup?utm_source=php&utm_medium=homepage",
+    "support": {
+        "email": "hello@apiverve.com",
+        "docs": "https://docs.apiverve.com/ref/countrylookup",
+        "source": "https://github.com/apiverve/countrylookup-API/tree/main/php"
+    },
+    "require": {
+        "php": ">=7.4",
+        "guzzlehttp/guzzle": "^7.0"
+    },
+    "require-dev": {
+        "phpunit/phpunit": "^9.0"
+    },
+    "autoload": {
+        "psr-4": {
+            "APIVerve\\Countrylookup\\": "src/"
+        }
+    },
+    "autoload-dev": {
+        "psr-4": {
+            "APIVerve\\Countrylookup\\Tests\\": "tests/"
+        }
+    },
+    "minimum-stability": "stable",
+    "prefer-stable": true
+}
