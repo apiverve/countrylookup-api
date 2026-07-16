@@ -20,6 +20,6 @@ namespace APIVerve.API.CountryLookup
         /// Specify if you would like to return all major cities of the country found
         /// </summary>
         [JsonProperty("majorcities")]
-        public string Majorcities { get; set; }
+        public bool? Majorcities { get; set; }
     }
 }
