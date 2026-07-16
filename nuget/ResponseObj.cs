@@ -25,6 +25,9 @@ namespace APIVerve.API.CountryLookup
 
         [JsonProperty("data")]
         public Data Data { get; set; }
+
+        [JsonProperty("premium")]
+        public Premium Premium { get; set; }
     }
 
     public partial class Data
@@ -48,7 +51,7 @@ namespace APIVerve.API.CountryLookup
         public string Cca2 { get; set; }
 
         [JsonProperty("ccn3")]
-        public long Ccn3 { get; set; }
+        public long? Ccn3 { get; set; }
 
         [JsonProperty("cca3")]
         public string Cca3 { get; set; }
@@ -57,13 +60,10 @@ namespace APIVerve.API.CountryLookup
         public string Cioc { get; set; }
 
         [JsonProperty("independent")]
-        public bool Independent { get; set; }
+        public bool? Independent { get; set; }
 
         [JsonProperty("status")]
         public string Status { get; set; }
-
-        [JsonProperty("currencies")]
-        public Currencies Currencies { get; set; }
 
         [JsonProperty("capital")]
         public string[] Capital { get; set; }
@@ -81,37 +81,13 @@ namespace APIVerve.API.CountryLookup
         public Languages Languages { get; set; }
 
         [JsonProperty("latlng")]
-        public long[] Latlng { get; set; }
+        public long?[] Latlng { get; set; }
 
         [JsonProperty("landlocked")]
-        public bool Landlocked { get; set; }
-
-        [JsonProperty("borders")]
-        public string[] Borders { get; set; }
-
-        [JsonProperty("area")]
-        public long Area { get; set; }
+        public bool? Landlocked { get; set; }
 
         [JsonProperty("flag")]
         public string Flag { get; set; }
-
-        [JsonProperty("majorCities")]
-        public string[] MajorCities { get; set; }
-    }
-
-    public partial class Currencies
-    {
-        [JsonProperty("USD")]
-        public Usd Usd { get; set; }
-    }
-
-    public partial class Usd
-    {
-        [JsonProperty("name")]
-        public string Name { get; set; }
-
-        [JsonProperty("symbol")]
-        public string Symbol { get; set; }
     }
 
     public partial class Languages
@@ -145,5 +121,17 @@ namespace APIVerve.API.CountryLookup
 
         [JsonProperty("common")]
         public string Common { get; set; }
+    }
+
+    public partial class Premium
+    {
+        [JsonProperty("message")]
+        public string Message { get; set; }
+
+        [JsonProperty("upgrade_url")]
+        public Uri UpgradeUrl { get; set; }
+
+        [JsonProperty("locked_fields")]
+        public string[] LockedFields { get; set; }
     }
 }
