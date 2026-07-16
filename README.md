@@ -191,11 +191,70 @@ x-api-key: YOUR_API_KEY_HERE
 Get your API key: [https://apiverve.com](https://apiverve.com)
 
 ### Response Format
-All responses are JSON with this structure:
+
+Every APIVerve endpoint returns the same envelope — check `status`, then read `data`:
+
 ```json
 {
   "status": "ok",
+  "error": null,
   "data": { ... }
+}
+```
+
+### Example Response
+
+A real response from the Country Lookup API:
+
+```json
+{
+  "status": "ok",
+  "error": null,
+  "data": {
+    "search": "USA",
+    "countries": [
+      {
+        "name": {
+          "common": "United States",
+          "official": "United States of America",
+          "native": {
+            "eng": {
+              "official": "United States of America",
+              "common": "United States"
+            }
+          }
+        },
+        "tld": [
+          ".us"
+        ],
+        "cca2": "US",
+        "ccn3": "840",
+        "cca3": "USA",
+        "cioc": "USA",
+        "independent": true,
+        "status": "officially-assigned",
+        "capital": [
+          "Washington D.C."
+        ],
+        "altSpellings": [
+          "US",
+          "USA",
+          "United States of America"
+        ],
+        "region": "Americas",
+        "subregion": "North America",
+        "languages": {
+          "eng": "English"
+        },
+        "latlng": [
+          38,
+          -97
+        ],
+        "landlocked": false,
+        "flag": "🇺🇸"
+      }
+    ]
+  }
 }
 ```
 
