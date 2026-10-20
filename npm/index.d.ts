@@ -30,22 +30,23 @@ declare module '@apiverve/countrylookup' {
   }
   
   interface Country {
-      name:         Name;
-      tld:          (null | string)[];
-      cca2:         null | string;
-      ccn3:         null | string;
-      cca3:         null | string;
-      cioc:         null | string;
-      independent:  boolean | null;
-      status:       null | string;
-      capital:      (null | string)[];
-      altSpellings: (null | string)[];
-      region:       null | string;
-      subregion:    null | string;
-      languages:    Languages;
-      latlng:       (number | null)[];
-      landlocked:   boolean | null;
-      flag:         null | string;
+      name:            Name;
+      tld:             (null | string)[];
+      cca2:            null | string;
+      ccn3:            null | string;
+      cca3:            null | string;
+      cioc:            null | string;
+      independent:     boolean | null;
+      status:          null | string;
+      unRegionalGroup: null | string;
+      capital:         (null | string)[];
+      altSpellings:    (null | string)[];
+      region:          null | string;
+      subregion:       null | string;
+      languages:       Languages;
+      latlng:          (number | null)[];
+      landlocked:      boolean | null;
+      flag:            null | string;
   }
   
   interface Languages {
