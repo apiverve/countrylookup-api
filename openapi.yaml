@@ -2,8 +2,9 @@ openapi: 3.0.4
 info:
   title: Country Lookup
   description: >-
-    Country Lookup is a simple tool for looking up country data. It returns the
-    country name, capital, and more.
+    Country Lookup matches any country name or ISO code to its official names,
+    ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add
+    coordinates and major cities.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -18,7 +19,7 @@ servers:
 paths:
   /v1/countrylookup:
     get:
-      summary: Lookup Country
+      summary: Country Lookup
       description: Lookup country data based on the country ISO Code
       operationId: countrylookup
       parameters:
@@ -78,6 +79,7 @@ paths:
                       cioc: USA
                       independent: true
                       status: officially-assigned
+                      unRegionalGroup: Western European and Others Group
                       capital:
                         - Washington D.C.
                       altSpellings:

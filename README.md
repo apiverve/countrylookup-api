@@ -1,13 +1,13 @@
-# [Country Lookup API](https://apiverve.com/marketplace/countrylookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+# [Country Lookup API](https://apiverve.com/marketplace/countrylookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Country Lookup is a simple tool for looking up country data. It returns the country name, capital, and more.
+Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities.
 
 The Country Lookup API provides a simple, reliable way to integrate country lookup functionality into your applications. Built for developers who need production-ready country lookup capabilities without the complexity of building from scratch.
 
-**[View API Details →](https://apiverve.com/marketplace/countrylookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)**
+**[View API Details →](https://apiverve.com/marketplace/countrylookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)**
 
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
-[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/countrylookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+[![API Status](https://img.shields.io/badge/Status-Active-green.svg)](https://apiverve.com/marketplace/countrylookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 [![Method](https://img.shields.io/badge/Method-GET-blue.svg)](#)
 [![Platform](https://img.shields.io/badge/Platform-Multi--Platform-orange.svg)](#installation)
 
@@ -161,7 +161,7 @@ go get github.com/apiverve/countrylookup-api/go
 
 ## Documentation
 
-- 🏠 **API Home:** [Country Lookup API](https://apiverve.com/marketplace/countrylookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home:** [Country Lookup API](https://apiverve.com/marketplace/countrylookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 📚 **API Reference:** [docs.apiverve.com/ref/countrylookup](https://docs.apiverve.com/ref/countrylookup)
 - 📖 **OpenAPI Spec:** [openapi.yaml](./openapi.yaml)
 - 💡 **Examples:** [examples/](./examples/)
@@ -233,6 +233,7 @@ A real response from the Country Lookup API:
         "cioc": "USA",
         "independent": true,
         "status": "officially-assigned",
+        "unRegionalGroup": "Western European and Others Group",
         "capital": [
           "Washington D.C."
         ],
@@ -262,7 +263,7 @@ A real response from the Country Lookup API:
 
 ## Support & Community
 
-- 🏠 **API Home**: [Country Lookup API](https://apiverve.com/marketplace/countrylookup?utm_source&#x3D;github&amp;utm_medium&#x3D;readme)
+- 🏠 **API Home**: [Country Lookup API](https://apiverve.com/marketplace/countrylookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 - 💬 **Support**: [https://apiverve.com/contact](https://apiverve.com/contact)
 - 🐛 **Issues**: [GitHub Issues](../../issues)
 - 📖 **Documentation**: [https://docs.apiverve.com](https://docs.apiverve.com)
