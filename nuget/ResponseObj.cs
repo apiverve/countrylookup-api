@@ -65,6 +65,9 @@ namespace APIVerve.API.CountryLookup
         [JsonProperty("status")]
         public string Status { get; set; }
 
+        [JsonProperty("unRegionalGroup")]
+        public string UnRegionalGroup { get; set; }
+
         [JsonProperty("capital")]
         public string[] Capital { get; set; }
 
