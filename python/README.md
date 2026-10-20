@@ -1,13 +1,12 @@
 Country Lookup API
 ============
 
-Country Lookup is a simple tool for looking up country data. It returns the country name, capital, and more.
+Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities.
 
-![Build Status](https://img.shields.io/badge/build-passing-green)
-![Code Climate](https://img.shields.io/badge/maintainability-B-purple)
-![Prod Ready](https://img.shields.io/badge/production-ready-blue)
 
-This is a Python API Wrapper for the [Country Lookup API](https://apiverve.com/marketplace/countrylookup?utm_source=pypi&utm_medium=readme)
+[![PyPI version](https://img.shields.io/pypi/v/apiverve-countrylookup.svg)](https://pypi.org/project/apiverve-countrylookup/)
+
+This is a Python wrapper for the [Country Lookup API](https://apiverve.com/marketplace/countrylookup?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -29,8 +28,8 @@ pip3 install apiverve-countrylookup
 
 ## Configuration
 
-Before using the countrylookup API client, you have to setup your account and obtain your API Key.
-You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=readme)
+Before using the Country Lookup API client, you have to setup your account and obtain your API Key.
+You can get it by signing up at [https://apiverve.com](https://apiverve.com?utm_source=pypi&utm_medium=referral&utm_content=readme)
 
 ---
 
@@ -63,7 +62,7 @@ except Exception as e:
 
 ## Usage
 
-The Country Lookup API documentation is found here: [https://docs.apiverve.com/ref/countrylookup](https://docs.apiverve.com/ref/countrylookup?utm_source=pypi&utm_medium=readme).
+The Country Lookup API documentation is found here: [https://docs.apiverve.com/ref/countrylookup](https://docs.apiverve.com/ref/countrylookup?utm_source=pypi&utm_medium=referral&utm_content=readme).
 You can find parameters, example responses, and status codes documented here.
 
 ### Setup
@@ -130,12 +129,7 @@ print(result)
         "cioc": "USA",
         "independent": true,
         "status": "officially-assigned",
-        "currencies": {
-          "USD": {
-            "name": "United States dollar",
-            "symbol": "$"
-          }
-        },
+        "unRegionalGroup": "Western European and Others Group",
         "capital": [
           "Washington D.C."
         ],
@@ -154,64 +148,7 @@ print(result)
           -97
         ],
         "landlocked": false,
-        "borders": [
-          "CAN",
-          "MEX"
-        ],
-        "area": 9372610,
-        "flag": "🇺🇸",
-        "majorCities": [
-          "Akron",
-          "Albany",
-          "Albuquerque",
-          "Alexandria",
-          "Allentown",
-          "Alpharetta",
-          "Anaheim",
-          "Anchorage",
-          "Ann Arbor",
-          "Arlington",
-          "Arlington",
-          "Asheville",
-          "Astoria",
-          "Atlanta",
-          "Aurora",
-          "Austin",
-          "Bakersfield",
-          "Baltimore",
-          "Baton Rouge",
-          "Beaverton",
-          "Bellevue",
-          "Berkeley",
-          "Beverly Hills",
-          "Birmingham",
-          "Boca Raton",
-          "Boise",
-          "Boston",
-          "Boulder",
-          "Bronx",
-          "Brooklyn",
-          "Buffalo",
-          "Cambridge",
-          "Carlsbad",
-          "Cary",
-          "Chandler",
-          "Charleston",
-          "Charlotte",
-          "Charlottesville",
-          "Chattanooga",
-          "Cherry Hill",
-          "Chicago",
-          "Cincinnati",
-          "Clearwater",
-          "Cleveland",
-          "Colorado Springs",
-          "Columbia",
-          "Columbia",
-          "Columbus",
-          "Costa Mesa",
-          "Dallas"
-        ]
+        "flag": "🇺🇸"
       }
     ]
   }
@@ -356,7 +293,7 @@ finally:
 
 ## Customer Support
 
-Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=readme).
+Need any assistance? [Get in touch with Customer Support](https://apiverve.com/contact?utm_source=pypi&utm_medium=referral&utm_content=readme).
 
 ---
 
@@ -367,12 +304,12 @@ Stay up to date by following [@apiverveHQ](https://twitter.com/apiverveHQ) on Tw
 
 ## Legal
 
-All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=readme) and all legal documents and agreements.
+All usage of the APIVerve website, API, and services is subject to the [APIVerve Terms of Service](https://apiverve.com/terms?utm_source=pypi&utm_medium=referral&utm_content=readme) and all legal documents and agreements.
 
 ---
 
 ## License
-Licensed under the The MIT License (MIT)
+Licensed under the MIT License (MIT)
 
 Copyright (&copy;) 2026 APIVerve, and EvlarSoft LLC
 
