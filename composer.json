@@ -1,7 +1,7 @@
 {
     "name": "apiverve/countrylookup",
-    "description": "Country Lookup is a simple tool for looking up country data. It returns the country name, capital, and more.",
-    "version": "1.2.0",
+    "description": "Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities.",
+    "version": "1.2.2",
     "type": "library",
     "license": "MIT",
     "authors": [
@@ -15,13 +15,13 @@
         "api",
         "apiverve",
         "countrylookup",
-        "country lookup",
-        "country data",
         "country lookup api",
-        "country data api",
-        "country lookup tool"
+        "country flag api",
+        "country native name api",
+        "country information api",
+        "iso country code lookup"
     ],
-    "homepage": "https://apiverve.com/marketplace/countrylookup?utm_source=php&utm_medium=homepage",
+    "homepage": "https://apiverve.com/marketplace/countrylookup?utm_source=php&utm_medium=referral&utm_content=homepage",
     "support": {
         "email": "hello@apiverve.com",
         "docs": "https://docs.apiverve.com/ref/countrylookup",
