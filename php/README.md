@@ -1,6 +1,6 @@
 # Country Lookup API - PHP Package
 
-Country Lookup is a simple tool for looking up country data. It returns the country name, capital, and more.
+Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities.
 
 ## Installation
 
@@ -94,6 +94,7 @@ $client = new Client(
         "cioc": "USA",
         "independent": true,
         "status": "officially-assigned",
+        "unRegionalGroup": "Western European and Others Group",
         "capital": [
           "Washington D.C."
         ],
@@ -126,11 +127,11 @@ $client = new Client(
 
 ## Documentation
 
-For more information, visit the [API Documentation](https://docs.apiverve.com/ref/countrylookup?utm_source=packagist&utm_medium=readme).
+For more information, visit the [API Documentation](https://docs.apiverve.com/ref/countrylookup?utm_source=packagist&utm_medium=referral&utm_content=readme).
 
 ## Support
 
-- Website: [https://apiverve.com/marketplace/countrylookup?utm_source=php&utm_medium=readme](https://apiverve.com/marketplace/countrylookup?utm_source=php&utm_medium=readme)
+- Website: [https://apiverve.com/marketplace/countrylookup?utm_source=php&utm_medium=referral&utm_content=readme](https://apiverve.com/marketplace/countrylookup?utm_source=php&utm_medium=referral&utm_content=readme)
 - Email: hello@apiverve.com
 
 ## License
