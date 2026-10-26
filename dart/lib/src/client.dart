@@ -46,7 +46,7 @@ final _formatPatterns = {
 
 /// Country Lookup API client.
 ///
-/// For more information, visit: https://apiverve.com/marketplace/countrylookup?utm_source=dart&utm_medium=readme
+/// For more information, visit: https://apiverve.com/marketplace/countrylookup?utm_source=dart&utm_medium=referral&utm_content=readme
 ///
 /// Parameters:
 /// * [country] (required) - The Country name or ISO code of the country for which you want to get the data (e.g., USA)

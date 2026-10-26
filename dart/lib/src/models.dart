@@ -6,22 +6,50 @@ class CountrylookupResponse {
   final dynamic error;
   final CountrylookupData? data;
 
+  /// Set only when the current plan locks one or more fields; null otherwise.
+  final PremiumInfo? premium;
+
   CountrylookupResponse({
     required this.status,
     this.error,
     this.data,
+    this.premium,
   });
 
   factory CountrylookupResponse.fromJson(Map<String, dynamic> json) => CountrylookupResponse(
     status: json['status'] as String? ?? '',
     error: json['error'],
     data: json['data'] != null ? CountrylookupData.fromJson(json['data']) : null,
+    premium: json['premium'] != null ? PremiumInfo.fromJson(json['premium']) : null,
   );
 
   Map<String, dynamic> toJson() => {
     'status': status,
     if (error != null) 'error': error,
     if (data != null) 'data': data,
+    if (premium != null) 'premium': premium!.toJson(),
+  };
+}
+
+/// Describes fields the current plan does not unlock. Locked fields arrive as null
+/// in [data], and [lockedFields] names them (nested ones use dot paths).
+class PremiumInfo {
+  final String? message;
+  final String? upgradeUrl;
+  final List<String>? lockedFields;
+
+  PremiumInfo({this.message, this.upgradeUrl, this.lockedFields});
+
+  factory PremiumInfo.fromJson(Map<String, dynamic> json) => PremiumInfo(
+    message: json['message'] as String?,
+    upgradeUrl: json['upgrade_url'] as String?,
+    lockedFields: (json['locked_fields'] as List?)?.map((e) => e.toString()).toList(),
+  );
+
+  Map<String, dynamic> toJson() => {
+    if (message != null) 'message': message,
+    if (upgradeUrl != null) 'upgrade_url': upgradeUrl,
+    if (lockedFields != null) 'locked_fields': lockedFields,
   };
 }
 
@@ -51,18 +79,15 @@ class CountrylookupDataCountriesItem {
   String? cioc;
   bool? independent;
   String? status;
-  CountrylookupDataCountriesItemCurrencies? currencies;
+  String? unRegionalGroup;
   List<String>? capital;
   List<String>? altSpellings;
   String? region;
   String? subregion;
   CountrylookupDataCountriesItemLanguages? languages;
-  List<int>? latlng;
+  List<num>? latlng;
   bool? landlocked;
-  List<String>? borders;
-  int? area;
   String? flag;
-  List<String>? majorCities;
 
   CountrylookupDataCountriesItem({
     this.name,
@@ -73,7 +98,7 @@ class CountrylookupDataCountriesItem {
     this.cioc,
     this.independent,
     this.status,
-    this.currencies,
+    this.unRegionalGroup,
     this.capital,
     this.altSpellings,
     this.region,
@@ -81,10 +106,7 @@ class CountrylookupDataCountriesItem {
     this.languages,
     this.latlng,
     this.landlocked,
-    this.borders,
-    this.area,
     this.flag,
-    this.majorCities,
   });
 
   factory CountrylookupDataCountriesItem.fromJson(Map<String, dynamic> json) => CountrylookupDataCountriesItem(
@@ -96,18 +118,15 @@ class CountrylookupDataCountriesItem {
       cioc: json['cioc'],
       independent: json['independent'],
       status: json['status'],
-      currencies: json['currencies'] != null ? CountrylookupDataCountriesItemCurrencies.fromJson(json['currencies']) : null,
+      unRegionalGroup: json['unRegionalGroup'],
       capital: (json['capital'] as List?)?.cast<String>(),
       altSpellings: (json['altSpellings'] as List?)?.cast<String>(),
       region: json['region'],
       subregion: json['subregion'],
       languages: json['languages'] != null ? CountrylookupDataCountriesItemLanguages.fromJson(json['languages']) : null,
-      latlng: (json['latlng'] as List?)?.cast<int>(),
+      latlng: (json['latlng'] as List?)?.cast<num>(),
       landlocked: json['landlocked'],
-      borders: (json['borders'] as List?)?.cast<String>(),
-      area: json['area'],
       flag: json['flag'],
-      majorCities: (json['majorCities'] as List?)?.cast<String>(),
     );
 }
 
@@ -153,33 +172,6 @@ class CountrylookupDataCountriesItemNameNativeEng {
   factory CountrylookupDataCountriesItemNameNativeEng.fromJson(Map<String, dynamic> json) => CountrylookupDataCountriesItemNameNativeEng(
       official: json['official'],
       common: json['common'],
-    );
-}
-
-class CountrylookupDataCountriesItemCurrencies {
-  CountrylookupDataCountriesItemCurrenciesUsd? USD;
-
-  CountrylookupDataCountriesItemCurrencies({
-    this.USD,
-  });
-
-  factory CountrylookupDataCountriesItemCurrencies.fromJson(Map<String, dynamic> json) => CountrylookupDataCountriesItemCurrencies(
-      USD: json['USD'] != null ? CountrylookupDataCountriesItemCurrenciesUsd.fromJson(json['USD']) : null,
-    );
-}
-
-class CountrylookupDataCountriesItemCurrenciesUsd {
-  String? name;
-  String? symbol;
-
-  CountrylookupDataCountriesItemCurrenciesUsd({
-    this.name,
-    this.symbol,
-  });
-
-  factory CountrylookupDataCountriesItemCurrenciesUsd.fromJson(Map<String, dynamic> json) => CountrylookupDataCountriesItemCurrenciesUsd(
-      name: json['name'],
-      symbol: json['symbol'],
     );
 }
 

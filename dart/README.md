@@ -1,11 +1,11 @@
 # Country Lookup API - Dart/Flutter Client
 
-Country Lookup is a simple tool for looking up country data. It returns the country name, capital, and more.
+Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_countrylookup.svg)](https://pub.dev/packages/apiverve_countrylookup)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 
-This is the Dart/Flutter client for the [Country Lookup API](https://apiverve.com/marketplace/countrylookup?utm_source=dart&utm_medium=readme).
+This is the Dart/Flutter client for the [Country Lookup API](https://apiverve.com/marketplace/countrylookup?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## Installation
 
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_countrylookup: ^1.1.14
+  apiverve_countrylookup: ^1.2.3
 ```
 
 Then run:
@@ -75,12 +75,7 @@ void main() async {
         "cioc": "USA",
         "independent": true,
         "status": "officially-assigned",
-        "currencies": {
-          "USD": {
-            "name": "United States dollar",
-            "symbol": "$"
-          }
-        },
+        "unRegionalGroup": "Western European and Others Group",
         "capital": [
           "Washington D.C."
         ],
@@ -99,64 +94,7 @@ void main() async {
           -97
         ],
         "landlocked": false,
-        "borders": [
-          "CAN",
-          "MEX"
-        ],
-        "area": 9372610,
-        "flag": "🇺🇸",
-        "majorCities": [
-          "Akron",
-          "Albany",
-          "Albuquerque",
-          "Alexandria",
-          "Allentown",
-          "Alpharetta",
-          "Anaheim",
-          "Anchorage",
-          "Ann Arbor",
-          "Arlington",
-          "Arlington",
-          "Asheville",
-          "Astoria",
-          "Atlanta",
-          "Aurora",
-          "Austin",
-          "Bakersfield",
-          "Baltimore",
-          "Baton Rouge",
-          "Beaverton",
-          "Bellevue",
-          "Berkeley",
-          "Beverly Hills",
-          "Birmingham",
-          "Boca Raton",
-          "Boise",
-          "Boston",
-          "Boulder",
-          "Bronx",
-          "Brooklyn",
-          "Buffalo",
-          "Cambridge",
-          "Carlsbad",
-          "Cary",
-          "Chandler",
-          "Charleston",
-          "Charlotte",
-          "Charlottesville",
-          "Chattanooga",
-          "Cherry Hill",
-          "Chicago",
-          "Cincinnati",
-          "Clearwater",
-          "Cleveland",
-          "Colorado Springs",
-          "Columbia",
-          "Columbia",
-          "Columbus",
-          "Costa Mesa",
-          "Dallas"
-        ]
+        "flag": "🇺🇸"
       }
     ]
   }
@@ -165,12 +103,12 @@ void main() async {
 
 ## API Reference
 
-- **API Home:** [Country Lookup API](https://apiverve.com/marketplace/countrylookup?utm_source=dart&utm_medium=readme)
-- **Documentation:** [docs.apiverve.com/ref/countrylookup](https://docs.apiverve.com/ref/countrylookup?utm_source=dart&utm_medium=readme)
+- **API Home:** [Country Lookup API](https://apiverve.com/marketplace/countrylookup?utm_source=dart&utm_medium=referral&utm_content=readme)
+- **Documentation:** [docs.apiverve.com/ref/countrylookup](https://docs.apiverve.com/ref/countrylookup?utm_source=dart&utm_medium=referral&utm_content=readme)
 
 ## Authentication
 
-All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=readme).
+All requests require an API key. Get yours at [apiverve.com](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme).
 
 ## License
 
@@ -178,4 +116,4 @@ MIT License - see [LICENSE](LICENSE) for details.
 
 ---
 
-Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=readme)
+Built with Dart for [APIVerve](https://apiverve.com?utm_source=dart&utm_medium=referral&utm_content=readme)
