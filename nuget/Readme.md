@@ -1,7 +1,7 @@
 Country Lookup API
 ============
 
-Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities.
+Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities, and with details=true demonyms, land area and UN membership.
 
 
 [![NuGet version](https://img.shields.io/nuget/v/APIVerve.API.CountryLookup.svg)](https://www.nuget.org/packages/APIVerve.API.CountryLookup)
@@ -61,7 +61,8 @@ class Program
 
         var queryOptions = new CountryLookupQueryOptions {
             Country = "USA",
-            Majorcities = true
+            Majorcities = true,
+            Details = true
         };
 
         // Make the API call
@@ -126,7 +127,8 @@ public class Example
 
         var queryOptions = new CountryLookupQueryOptions {
             Country = "USA",
-            Majorcities = true
+            Majorcities = true,
+            Details = true
         };
 
         var response = await apiClient.ExecuteAsync(queryOptions);
@@ -159,7 +161,8 @@ public class Example
 
         var queryOptions = new CountryLookupQueryOptions {
             Country = "USA",
-            Majorcities = true
+            Majorcities = true,
+            Details = true
         };
 
         var response = apiClient.Execute(queryOptions);
@@ -197,7 +200,8 @@ public class Example
 
         var queryOptions = new CountryLookupQueryOptions {
             Country = "USA",
-            Majorcities = true
+            Majorcities = true,
+            Details = true
         };
 
         try
@@ -254,7 +258,8 @@ public class Example
 
         var queryOptions = new CountryLookupQueryOptions {
             Country = "USA",
-            Majorcities = true
+            Majorcities = true,
+            Details = true
         };
 
         try
@@ -296,7 +301,8 @@ apiClient.AddCustomHeader("X-Request-ID", Guid.NewGuid().ToString());
 
 var queryOptions = new CountryLookupQueryOptions {
     Country = "USA",
-    Majorcities = true
+    Majorcities = true,
+    Details = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -323,7 +329,8 @@ apiClient.SetLogger(message =>
 
 var queryOptions = new CountryLookupQueryOptions {
     Country = "USA",
-    Majorcities = true
+    Majorcities = true,
+    Details = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -342,7 +349,8 @@ apiClient.SetRetryDelay(1500);        // Wait 1.5 seconds between retries (defau
 
 var queryOptions = new CountryLookupQueryOptions {
     Country = "USA",
-    Majorcities = true
+    Majorcities = true,
+    Details = true
 };
 
 var response = await apiClient.ExecuteAsync(queryOptions);
@@ -355,7 +363,8 @@ The API client implements `IDisposable` for proper resource cleanup:
 ```csharp
 var queryOptions = new CountryLookupQueryOptions {
     Country = "USA",
-    Majorcities = true
+    Majorcities = true,
+    Details = true
 };
 
 using (var apiClient = new CountryLookupAPIClient("[YOUR_API_KEY]"))
@@ -416,7 +425,19 @@ using (var apiClient = new CountryLookupAPIClient("[YOUR_API_KEY]"))
           -97
         ],
         "landlocked": false,
-        "flag": "🇺🇸"
+        "flag": "🇺🇸",
+        "area": 9372610,
+        "demonyms": {
+          "eng": {
+            "f": "American",
+            "m": "American"
+          },
+          "fra": {
+            "f": "Américaine",
+            "m": "Américain"
+          }
+        },
+        "unMember": true
       }
     ]
   }

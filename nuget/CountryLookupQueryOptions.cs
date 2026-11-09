@@ -21,5 +21,11 @@ namespace APIVerve.API.CountryLookup
         /// </summary>
         [JsonProperty("majorcities")]
         public bool? Majorcities { get; set; }
+
+        /// <summary>
+        /// Set to true to add demonyms, land area in square kilometers, and UN membership to each country
+        /// </summary>
+        [JsonProperty("details")]
+        public bool? Details { get; set; }
     }
 }

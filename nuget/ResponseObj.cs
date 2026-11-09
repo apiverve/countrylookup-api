@@ -91,6 +91,33 @@ namespace APIVerve.API.CountryLookup
 
         [JsonProperty("flag")]
         public string Flag { get; set; }
+
+        [JsonProperty("area")]
+        public long? Area { get; set; }
+
+        [JsonProperty("demonyms")]
+        public Demonyms Demonyms { get; set; }
+
+        [JsonProperty("unMember")]
+        public bool? UnMember { get; set; }
+    }
+
+    public partial class Demonyms
+    {
+        [JsonProperty("eng")]
+        public FraClass Eng { get; set; }
+
+        [JsonProperty("fra")]
+        public FraClass Fra { get; set; }
+    }
+
+    public partial class FraClass
+    {
+        [JsonProperty("f")]
+        public string F { get; set; }
+
+        [JsonProperty("m")]
+        public string M { get; set; }
     }
 
     public partial class Languages
@@ -114,10 +141,10 @@ namespace APIVerve.API.CountryLookup
     public partial class Native
     {
         [JsonProperty("eng")]
-        public Eng Eng { get; set; }
+        public NativeEng Eng { get; set; }
     }
 
-    public partial class Eng
+    public partial class NativeEng
     {
         [JsonProperty("official")]
         public string Official { get; set; }
