@@ -4,7 +4,8 @@ info:
   description: >-
     Country Lookup matches any country name or ISO code to its official names,
     ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add
-    coordinates and major cities.
+    coordinates and major cities, and with details=true demonyms, land area and
+    UN membership.
   termsOfService: https://apiverve.com/terms/
   contact:
     name: APIVerve Support
@@ -20,7 +21,9 @@ paths:
   /v1/countrylookup:
     get:
       summary: Country Lookup
-      description: Lookup country data based on the country ISO Code
+      description: >-
+        Lookup country data based on the country name or ISO code, with optional
+        demonyms, area and UN membership
       operationId: countrylookup
       parameters:
         - name: country
@@ -40,6 +43,15 @@ paths:
           description: >-
             Specify if you would like to return all major cities of the country
             found
+          example: true
+        - name: details
+          in: query
+          schema:
+            type: boolean
+          required: false
+          description: >-
+            Set to true to add demonyms, land area in square kilometers, and UN
+            membership to each country
           example: true
       responses:
         '200':
@@ -95,6 +107,15 @@ paths:
                         - -97
                       landlocked: false
                       flag: 🇺🇸
+                      area: 9372610
+                      demonyms:
+                        eng:
+                          f: American
+                          m: American
+                        fra:
+                          f: Américaine
+                          m: Américain
+                      unMember: true
         '401':
           description: Your request was not authorized, or your API Key was invalid
         '404':

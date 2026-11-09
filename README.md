@@ -1,6 +1,6 @@
 # [Country Lookup API](https://apiverve.com/marketplace/countrylookup?utm_source&#x3D;github&amp;utm_medium&#x3D;referral&amp;utm_content&#x3D;readme)
 
-Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities.
+Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities, and with details&#x3D;true demonyms, land area and UN membership.
 
 The Country Lookup API provides a simple, reliable way to integrate country lookup functionality into your applications. Built for developers who need production-ready country lookup capabilities without the complexity of building from scratch.
 
@@ -31,7 +31,8 @@ The Country Lookup API provides a simple, reliable way to integrate country look
 async function callCountryLookupAPI() {
     try {
         const params = new URLSearchParams({
-            country: 'USA'
+            country: 'USA',
+            details: true
         });
 
         const response = await fetch(`https://api.apiverve.com/v1/countrylookup?${params}`, {
@@ -54,7 +55,7 @@ callCountryLookupAPI();
 ### Using cURL
 
 ```bash
-curl -X GET "https://api.apiverve.com/v1/countrylookup?country=USA" \
+curl -X GET "https://api.apiverve.com/v1/countrylookup?country=USA&details=true" \
   -H "x-api-key: YOUR_API_KEY_HERE"
 ```
 
@@ -252,7 +253,19 @@ A real response from the Country Lookup API:
           -97
         ],
         "landlocked": false,
-        "flag": "🇺🇸"
+        "flag": "🇺🇸",
+        "area": 9372610,
+        "demonyms": {
+          "eng": {
+            "f": "American",
+            "m": "American"
+          },
+          "fra": {
+            "f": "Américaine",
+            "m": "Américain"
+          }
+        },
+        "unMember": true
       }
     ]
   }

@@ -15,7 +15,8 @@ async function callCountryLookupAPI() {
   try {
     // Query parameters
     const params &#x3D; new URLSearchParams({
-            country: &#x27;USA&#x27;
+            country: &#x27;USA&#x27;,
+            details: true
         });
 
     const response = await fetch(`${API_URL}?${params}`, {

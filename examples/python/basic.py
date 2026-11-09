@@ -18,7 +18,7 @@ def call_countrylookup_api():
     """
     try:
         # Query parameters
-        params &#x3D; {&#x27;country&#x27;: &#x27;USA&#x27;}
+        params &#x3D; {&#x27;country&#x27;: &#x27;USA&#x27;, &#x27;details&#x27;: true}
 
         headers = {
             'x-api-key': API_KEY
