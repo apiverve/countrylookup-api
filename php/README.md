@@ -1,6 +1,6 @@
 # Country Lookup API - PHP Package
 
-Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities.
+Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities, and with details=true demonyms, land area and UN membership.
 
 ## Installation
 
@@ -29,7 +29,8 @@ $client = new Client('YOUR_API_KEY');
 // Make a request
 $response = $client->execute([
     'country' => 'USA',
-    'majorcities' => true
+    'majorcities' => true,
+    'details' => true
 ]);
 
 // Print the response
@@ -45,7 +46,7 @@ use APIVerve\Countrylookup\Exceptions\APIException;
 use APIVerve\Countrylookup\Exceptions\ValidationException;
 
 try {
-    $response = $client->execute(['country' => 'USA', 'majorcities' => true]);
+    $response = $client->execute(['country' => 'USA', 'majorcities' => true, 'details' => true]);
     print_r($response['data']);
 } catch (ValidationException $e) {
     echo "Validation error: " . implode(', ', $e->getErrors());
@@ -113,7 +114,19 @@ $client = new Client(
           -97
         ],
         "landlocked": false,
-        "flag": "🇺🇸"
+        "flag": "🇺🇸",
+        "area": 9372610,
+        "demonyms": {
+          "eng": {
+            "f": "American",
+            "m": "American"
+          },
+          "fra": {
+            "f": "Américaine",
+            "m": "Américain"
+          }
+        },
+        "unMember": true
       }
     ]
   }

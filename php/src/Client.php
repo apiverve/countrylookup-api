@@ -15,7 +15,7 @@ use APIVerve\Countrylookup\Exceptions\ValidationException;
  * @example Basic usage
  * ```php
  * $client = new Client('your_api_key');
- * $response = $client->execute(['country' => 'USA', 'majorcities' => true]);
+ * $response = $client->execute(['country' => 'USA', 'majorcities' => true, 'details' => true]);
  * print_r($response);
  * ```
  *
@@ -35,7 +35,8 @@ class Client
      */
     private const VALIDATION_RULES = [
         'country' => ['type' => 'string', 'required' => true],
-        'majorcities' => ['type' => 'boolean', 'required' => false]
+        'majorcities' => ['type' => 'boolean', 'required' => false],
+        'details' => ['type' => 'boolean', 'required' => false]
     ];
 
     /**
