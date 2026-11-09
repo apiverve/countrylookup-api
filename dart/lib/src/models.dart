@@ -88,6 +88,9 @@ class CountrylookupDataCountriesItem {
   List<num>? latlng;
   bool? landlocked;
   String? flag;
+  num? area;
+  CountrylookupDataCountriesItemDemonyms? demonyms;
+  bool? unMember;
 
   CountrylookupDataCountriesItem({
     this.name,
@@ -107,6 +110,9 @@ class CountrylookupDataCountriesItem {
     this.latlng,
     this.landlocked,
     this.flag,
+    this.area,
+    this.demonyms,
+    this.unMember,
   });
 
   factory CountrylookupDataCountriesItem.fromJson(Map<String, dynamic> json) => CountrylookupDataCountriesItem(
@@ -127,6 +133,9 @@ class CountrylookupDataCountriesItem {
       latlng: (json['latlng'] as List?)?.cast<num>(),
       landlocked: json['landlocked'],
       flag: json['flag'],
+      area: json['area'],
+      demonyms: json['demonyms'] != null ? CountrylookupDataCountriesItemDemonyms.fromJson(json['demonyms']) : null,
+      unMember: json['unMember'],
     );
 }
 
@@ -187,17 +196,65 @@ class CountrylookupDataCountriesItemLanguages {
     );
 }
 
+class CountrylookupDataCountriesItemDemonyms {
+  CountrylookupDataCountriesItemDemonymsEng? eng;
+  CountrylookupDataCountriesItemDemonymsFra? fra;
+
+  CountrylookupDataCountriesItemDemonyms({
+    this.eng,
+    this.fra,
+  });
+
+  factory CountrylookupDataCountriesItemDemonyms.fromJson(Map<String, dynamic> json) => CountrylookupDataCountriesItemDemonyms(
+      eng: json['eng'] != null ? CountrylookupDataCountriesItemDemonymsEng.fromJson(json['eng']) : null,
+      fra: json['fra'] != null ? CountrylookupDataCountriesItemDemonymsFra.fromJson(json['fra']) : null,
+    );
+}
+
+class CountrylookupDataCountriesItemDemonymsEng {
+  String? f;
+  String? m;
+
+  CountrylookupDataCountriesItemDemonymsEng({
+    this.f,
+    this.m,
+  });
+
+  factory CountrylookupDataCountriesItemDemonymsEng.fromJson(Map<String, dynamic> json) => CountrylookupDataCountriesItemDemonymsEng(
+      f: json['f'],
+      m: json['m'],
+    );
+}
+
+class CountrylookupDataCountriesItemDemonymsFra {
+  String? f;
+  String? m;
+
+  CountrylookupDataCountriesItemDemonymsFra({
+    this.f,
+    this.m,
+  });
+
+  factory CountrylookupDataCountriesItemDemonymsFra.fromJson(Map<String, dynamic> json) => CountrylookupDataCountriesItemDemonymsFra(
+      f: json['f'],
+      m: json['m'],
+    );
+}
+
 class CountrylookupRequest {
   String country;
   bool? majorcities;
+  bool? details;
 
   CountrylookupRequest({
     required this.country,
     this.majorcities,
+    this.details,
   });
 
   Map<String, dynamic> toJson() => {
       'country': country,
       if (majorcities != null) 'majorcities': majorcities,
+      if (details != null) 'details': details,
     };
 }

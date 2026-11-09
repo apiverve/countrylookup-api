@@ -1,6 +1,6 @@
 # Country Lookup API - Dart/Flutter Client
 
-Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities.
+Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities, and with details=true demonyms, land area and UN membership.
 
 [![pub package](https://img.shields.io/pub/v/apiverve_countrylookup.svg)](https://pub.dev/packages/apiverve_countrylookup)
 [![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
@@ -13,7 +13,7 @@ Add this to your `pubspec.yaml`:
 
 ```yaml
 dependencies:
-  apiverve_countrylookup: ^1.2.4
+  apiverve_countrylookup: ^1.2.5
 ```
 
 Then run:
@@ -35,7 +35,8 @@ void main() async {
   try {
     final response = await client.execute({
       'country': 'USA',
-      'majorcities': true
+      'majorcities': true,
+      'details': true
     });
 
     print('Status: ${response.status}');
@@ -94,7 +95,19 @@ void main() async {
           -97
         ],
         "landlocked": false,
-        "flag": "🇺🇸"
+        "flag": "🇺🇸",
+        "area": 9372610,
+        "demonyms": {
+          "eng": {
+            "f": "American",
+            "m": "American"
+          },
+          "fra": {
+            "f": "Américaine",
+            "m": "Américain"
+          }
+        },
+        "unMember": true
       }
     ]
   }

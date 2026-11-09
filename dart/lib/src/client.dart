@@ -51,6 +51,7 @@ final _formatPatterns = {
 /// Parameters:
 /// * [country] (required) - The Country name or ISO code of the country for which you want to get the data (e.g., USA)
 /// * [majorcities] - Specify if you would like to return all major cities of the country found
+/// * [details] - Set to true to add demonyms, land area in square kilometers, and UN membership to each country
 class CountrylookupClient {
   final String apiKey;
   final String baseUrl;
@@ -60,6 +61,7 @@ class CountrylookupClient {
   static final Map<String, ValidationRule> _validationRules = <String, ValidationRule>{
     'country': ValidationRule(type: 'string', required: true),
     'majorcities': ValidationRule(type: 'boolean', required: false),
+    'details': ValidationRule(type: 'boolean', required: false),
   };
 
   CountrylookupClient(this.apiKey, {
