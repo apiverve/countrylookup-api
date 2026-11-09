@@ -16,7 +16,8 @@ const api = new countrylookupAPI({
 // Example query
 var query = {
   country: "USA",
-  majorcities: false
+  majorcities: false,
+  details: false
 };
 
 // Make the API request using callback

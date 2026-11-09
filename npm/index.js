@@ -30,7 +30,7 @@ class countrylookupWrapper {
         this.baseURL = 'https://api.apiverve.com/v1/countrylookup';
 
         // Validation rules for parameters (generated from schema)
-        this.validationRules = {"country":{"type":"string","required":true},"majorcities":{"type":"boolean","required":false,"default":false}};
+        this.validationRules = {"country":{"type":"string","required":true},"majorcities":{"type":"boolean","required":false,"default":false},"details":{"type":"boolean","required":false,"default":false}};
     }
 
     /**

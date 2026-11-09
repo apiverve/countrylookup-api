@@ -1,6 +1,6 @@
 # Country Lookup API
 
-Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities.
+Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities, and with details=true demonyms, land area and UN membership.
 
 [![npm version](https://img.shields.io/npm/v/@apiverve/countrylookup.svg)](https://www.npmjs.com/package/@apiverve/countrylookup)
 
@@ -58,7 +58,8 @@ Using the API is simple. All you have to do is make a request. The API will retu
 ```javascript
 var query = {
   country: "USA",
-  majorcities: false
+  majorcities: false,
+  details: false
 };
 
 api.execute(query, function (error, data) {
@@ -79,7 +80,8 @@ You can also use promises to make requests. The API returns a promise that you c
 ```javascript
 var query = {
   country: "USA",
-  majorcities: false
+  majorcities: false,
+  details: false
 };
 
 api.execute(query)
@@ -101,7 +103,8 @@ You can also use async/await to make requests. The API returns a promise that yo
 async function makeRequest() {
     var query = {
   country: "USA",
-  majorcities: false
+  majorcities: false,
+  details: false
 };
 
     try {
@@ -163,7 +166,19 @@ async function makeRequest() {
           -97
         ],
         "landlocked": false,
-        "flag": "🇺🇸"
+        "flag": "🇺🇸",
+        "area": 9372610,
+        "demonyms": {
+          "eng": {
+            "f": "American",
+            "m": "American"
+          },
+          "fra": {
+            "f": "Américaine",
+            "m": "Américain"
+          }
+        },
+        "unMember": true
       }
     ]
   }

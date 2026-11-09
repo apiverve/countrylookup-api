@@ -47,6 +47,19 @@ declare module '@apiverve/countrylookup' {
       latlng:          (number | null)[];
       landlocked:      boolean | null;
       flag:            null | string;
+      area:            number | null;
+      demonyms:        Demonyms;
+      unMember:        boolean | null;
+  }
+  
+  interface Demonyms {
+      eng: FraClass;
+      fra: FraClass;
+  }
+  
+  interface FraClass {
+      f: null | string;
+      m: null | string;
   }
   
   interface Languages {
@@ -60,10 +73,10 @@ declare module '@apiverve/countrylookup' {
   }
   
   interface Native {
-      eng: Eng;
+      eng: NativeEng;
   }
   
-  interface Eng {
+  interface NativeEng {
       official: null | string;
       common:   null | string;
   }
