@@ -1,6 +1,6 @@
 # Country Lookup API - Ruby Gem
 
-Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities.
+Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities, and with details=true demonyms, land area and UN membership.
 
 ## Installation
 
@@ -37,7 +37,8 @@ client = APIVerve::Countrylookup::Client.new(api_key: "YOUR_API_KEY")
 # Make a request
 response = client.execute({
   country: "USA",
-  majorcities: true
+  majorcities: true,
+  details: true
 })
 
 # Print the response
@@ -49,7 +50,7 @@ puts response
 
 ```ruby
 begin
-  response = client.execute({ country: "USA", majorcities: true })
+  response = client.execute({ country: "USA", majorcities: true, details: true })
   puts response["data"]
 rescue APIVerve::Countrylookup::ValidationError => e
   puts "Validation error: #{e.errors.join(', ')}"
@@ -117,7 +118,19 @@ client = APIVerve::Countrylookup::Client.new(
           -97
         ],
         "landlocked": false,
-        "flag": "🇺🇸"
+        "flag": "🇺🇸",
+        "area": 9372610,
+        "demonyms": {
+          "eng": {
+            "f": "American",
+            "m": "American"
+          },
+          "fra": {
+            "f": "Américaine",
+            "m": "Américain"
+          }
+        },
+        "unMember": true
       }
     ]
   }

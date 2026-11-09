@@ -10,7 +10,7 @@ module APIVerve
     #
     # @example Basic usage
     #   client = APIVerve::Countrylookup::Client.new(api_key: "your_api_key")
-    #   response = client.execute({ country: "USA", majorcities: true })
+    #   response = client.execute({ country: "USA", majorcities: true, details: true })
     #   puts response
     #
     # @see https://apiverve.com/marketplace/countrylookup?utm_source=ruby&utm_medium=referral&utm_content=readme
@@ -19,7 +19,7 @@ module APIVerve
       DEFAULT_TIMEOUT = 30
 
       # Validation rules for parameters
-      VALIDATION_RULES = { 'country' => { type: 'string', required: true }, 'majorcities' => { type: 'boolean', required: false } }
+      VALIDATION_RULES = { 'country' => { type: 'string', required: true }, 'majorcities' => { type: 'boolean', required: false }, 'details' => { type: 'boolean', required: false } }
 
       # Format validation patterns
       FORMAT_PATTERNS = {
