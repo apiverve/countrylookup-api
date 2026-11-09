@@ -1,7 +1,7 @@
 Country Lookup API
 ============
 
-Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities.
+Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities, and with details=true demonyms, land area and UN membership.
 
 
 [![PyPI version](https://img.shields.io/pypi/v/apiverve-countrylookup.svg)](https://pypi.org/project/apiverve-countrylookup/)
@@ -45,7 +45,8 @@ api = CountrylookupAPIClient("[YOUR_API_KEY]")
 
 query = {
     "country": "USA",
-    "majorcities": true
+    "majorcities": true,
+    "details": true
 }
 
 try:
@@ -86,7 +87,8 @@ Using the API client, you can perform requests to the API.
 ```python
 query = {
     "country": "USA",
-    "majorcities": true
+    "majorcities": true,
+    "details": true
 }
 ```
 
@@ -148,7 +150,19 @@ print(result)
           -97
         ],
         "landlocked": false,
-        "flag": "🇺🇸"
+        "flag": "🇺🇸",
+        "area": 9372610,
+        "demonyms": {
+          "eng": {
+            "f": "American",
+            "m": "American"
+          },
+          "fra": {
+            "f": "Américaine",
+            "m": "Américain"
+          }
+        },
+        "unMember": true
       }
     ]
   }
@@ -170,7 +184,8 @@ api = CountrylookupAPIClient("[YOUR_API_KEY]")
 
 query = {
     "country": "USA",
-    "majorcities": true
+    "majorcities": true,
+    "details": true
 }
 
 try:
@@ -194,7 +209,8 @@ api = CountrylookupAPIClient("[YOUR_API_KEY]")
 
 query = {
     "country": "USA",
-    "majorcities": true
+    "majorcities": true,
+    "details": true
 }
 
 try:
@@ -231,7 +247,8 @@ from apiverve_countrylookup.apiClient import CountrylookupAPIClient, Countrylook
 
 query = {
     "country": "USA",
-    "majorcities": true
+    "majorcities": true,
+    "details": true
 }
 
 # Using context manager ensures proper cleanup
@@ -260,7 +277,8 @@ api = CountrylookupAPIClient("[YOUR_API_KEY]", debug=True)
 
 query = {
     "country": "USA",
-    "majorcities": true
+    "majorcities": true,
+    "details": true
 }
 
 # Debug information will be printed to console
@@ -278,7 +296,8 @@ api = CountrylookupAPIClient("[YOUR_API_KEY]")
 
 query = {
     "country": "USA",
-    "majorcities": true
+    "majorcities": true,
+    "details": true
 }
 
 try:

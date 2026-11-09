@@ -1,10 +1,10 @@
 [project]
 name = "apiverve-countrylookup"
-version = "1.2.4"
+version = "1.2.5"
 authors = [
   { name="APIVerve", email="hello@apiverve.com" },
 ]
-description = "Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities."
+description = "Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities, and with details=true demonyms, land area and UN membership."
 keywords = ["country lookup api", "country flag api", "country native name api", "country information api", "iso country code lookup"]
 readme = "README.md"
 requires-python = ">=3.9"

@@ -25,7 +25,8 @@ class CountrylookupAPIClient:
     # Validation rules for parameters (generated from schema)
     VALIDATION_RULES = {
         "country": {"type": "string", "required": True},
-        "majorcities": {"type": "boolean", "required": False, "default": False}
+        "majorcities": {"type": "boolean", "required": False, "default": False},
+        "details": {"type": "boolean", "required": False, "default": False}
     }
 
     # Format validation patterns
