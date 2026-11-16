@@ -1,7 +1,7 @@
 {
     "name": "apiverve/countrylookup",
     "description": "Country Lookup matches any country name or ISO code to its official names, ISO 3166 codes, capitals, region, languages, and flag emoji. Paid plans add coordinates and major cities, and with details=true demonyms, land area and UN membership.",
-    "version": "1.2.5",
+    "version": "1.2.6",
     "type": "library",
     "license": "MIT",
     "authors": [
